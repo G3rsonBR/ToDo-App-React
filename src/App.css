@@ -30,6 +30,8 @@ h1 {
 }
 
 .withoutTasks {
+  width: 90%;
+  text-align: center;
   margin-top: 25px;
   color: #0000008c;
 }
