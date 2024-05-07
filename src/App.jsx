@@ -20,6 +20,7 @@ export default function App() {
         console.log(task)
         return { ...task, isDone: !task.isDone };
       }
+      return task
     })
 
     localStorage.setItem("tasks", JSON.stringify(newTasks));

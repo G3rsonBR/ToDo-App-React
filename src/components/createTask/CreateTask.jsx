@@ -19,7 +19,7 @@ export function CreateTask({ handleAddTask }) {
 
   return (
     <div className="createTaskDiv">
-      <form onSubmit={handleSubmit}>
+      <form autoComplete="off" onSubmit={handleSubmit}>
           <input
             type="text"
             id="task"
