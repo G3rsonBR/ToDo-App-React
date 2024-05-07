@@ -1,0 +1,82 @@
+.card {
+  width: 500px;
+  background-color: rgb(32, 32, 54);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  gap: 10px;
+  border-radius: 5px;
+}
+
+.task {
+  color: rgb(201, 201, 201);
+}
+
+.completedTask {
+  color: rgb(201, 201, 201);
+  text-decoration: line-through;
+}
+
+.btnDelete {
+  border-radius: 5px;
+  display: flex;
+  border: none;
+  background-color: transparent;
+  color: rgb(233, 75, 75);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  transition: .3s all ease;
+}
+
+.btnDelete:hover {
+  background-color: rgba(207, 206, 206, 0.116);
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgb(133, 131, 192);
+  border: 0.15rem solid rgb(34, 33, 71);
+  margin: 0;
+
+  padding: .3rem;
+  border-radius: 1rem;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+  transition: .3s all ease-in;
+}
+
+input[type="checkbox"]:hover { background-color: rgb(156, 152, 231); }
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em rgb(219, 219, 219);
+  background-color: CanvasText;
+}
+
+input[type="checkbox"]:checked {
+  background-color: rgb(59, 78, 112);
+  border: 0.15rem solid rgb(34, 33, 71);
+}
+
+input[type="checkbox"]:checked:hover { background-color: rgb(86, 114, 163); }
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+@media screen and (max-width: 650px) {
+  .card {
+    width: 100%;
+  }
+}
